@@ -5,23 +5,44 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build:dev": "webpack --config=config/webpack.dev.js",
-    "dev": "webpack-dev-server --config=config/webpack.dev.js"
+    "build": "webpack --config=config/webpack.dev.js",
+    "start": "webpack-dev-server --config=config/webpack.dev.js",
+    "dev": "nodemon --inspect --watch config --watch src/server src/server/server.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/gothbarbie/webpack-4.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Hanna Söderström <contact@hannasoderstrom.com> (http://hannasoderstrom.com)",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/gothbarbie/webpack-4/issues"
   },
   "homepage": "https://github.com/gothbarbie/webpack-4#readme",
   "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-plugin-async-to-promises": "^1.0.5",
+    "babel-plugin-transform-es2015-arrow-functions": "^6.22.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-runtime": "^6.26.0",
+    "css-loader": "^1.0.0",
+    "extract-loader": "^3.0.0",
+    "file-loader": "^2.0.0",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "style-loader": "^0.23.0",
     "webpack": "^4.20.2",
     "webpack-cli": "^3.1.2",
-    "webpack-dev-server": "^3.1.9"
+    "webpack-dev-middleware": "^3.4.0",
+    "webpack-dev-server": "^3.1.9",
+    "webpack-hot-middleware": "^2.24.2"
+  },
+  "devDependencies": {
+    "express": "^4.16.3",
+    "nodemon": "^1.18.4"
   }
 }

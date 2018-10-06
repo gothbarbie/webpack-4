@@ -77,7 +77,7 @@
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "";
+/******/ 	__webpack_require__.p = "/";
 /******/
 /******/
 /******/ 	// Load entry module and return exports
@@ -93,7 +93,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("\n\n//# sourceURL=webpack:///./src/main.js?");
+eval("throw new Error(\"Module build failed (from ./node_modules/babel-loader/lib/index.js):\\nError: Cannot find module 'babel-core'\\n    at Function.Module._resolveFilename (module.js:555:15)\\n    at Function.Module._load (module.js:482:25)\\n    at Module.require (module.js:604:17)\\n    at require (/Users/HSM/Documents/dev/learning/webpack4/node_modules/v8-compile-cache/v8-compile-cache.js:159:20)\\n    at Object.<anonymous> (/Users/HSM/Documents/dev/learning/webpack4/node_modules/babel-loader/lib/index.js:3:13)\\n    at Module._compile (/Users/HSM/Documents/dev/learning/webpack4/node_modules/v8-compile-cache/v8-compile-cache.js:178:30)\\n    at Object.Module._extensions..js (module.js:671:10)\\n    at Module.load (module.js:573:32)\\n    at tryModuleLoad (module.js:513:12)\\n    at Function.Module._load (module.js:505:3)\\n    at Module.require (module.js:604:17)\\n    at require (/Users/HSM/Documents/dev/learning/webpack4/node_modules/v8-compile-cache/v8-compile-cache.js:159:20)\\n    at loadLoader (/Users/HSM/Documents/dev/learning/webpack4/node_modules/loader-runner/lib/loadLoader.js:13:17)\\n    at iteratePitchingLoaders (/Users/HSM/Documents/dev/learning/webpack4/node_modules/loader-runner/lib/LoaderRunner.js:169:2)\\n    at runLoaders (/Users/HSM/Documents/dev/learning/webpack4/node_modules/loader-runner/lib/LoaderRunner.js:362:2)\\n    at NormalModule.doBuild (/Users/HSM/Documents/dev/learning/webpack4/node_modules/webpack/lib/NormalModule.js:265:3)\\n    at NormalModule.build (/Users/HSM/Documents/dev/learning/webpack4/node_modules/webpack/lib/NormalModule.js:412:15)\\n    at Compilation.buildModule (/Users/HSM/Documents/dev/learning/webpack4/node_modules/webpack/lib/Compilation.js:618:10)\\n    at moduleFactory.create (/Users/HSM/Documents/dev/learning/webpack4/node_modules/webpack/lib/Compilation.js:996:12)\\n    at factory (/Users/HSM/Documents/dev/learning/webpack4/node_modules/webpack/lib/NormalModuleFactory.js:405:6)\\n    at hooks.afterResolve.callAsync (/Users/HSM/Documents/dev/learning/webpack4/node_modules/webpack/lib/NormalModuleFactory.js:155:13)\\n    at AsyncSeriesWaterfallHook.eval [as callAsync] (eval at create (/Users/HSM/Documents/dev/learning/webpack4/node_modules/tapable/lib/HookCodeFactory.js:32:10), <anonymous>:6:1)\\n    at AsyncSeriesWaterfallHook.lazyCompileHook (/Users/HSM/Documents/dev/learning/webpack4/node_modules/tapable/lib/Hook.js:154:20)\\n    at resolver (/Users/HSM/Documents/dev/learning/webpack4/node_modules/webpack/lib/NormalModuleFactory.js:138:29)\\n    at process.nextTick (/Users/HSM/Documents/dev/learning/webpack4/node_modules/webpack/lib/NormalModuleFactory.js:342:9)\\n    at process._tickCallback (internal/process/next_tick.js:150:11)\");\n\n//# sourceURL=webpack:///./src/main.js?");
 
 /***/ })
 
