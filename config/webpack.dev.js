@@ -45,6 +45,10 @@ module.exports = {
           },
           {
             loader: 'css-loader',
+            query: {
+              modules: true, // module based css-files
+              loadelIdentName: '[name]__[local]--[hash:base64:8]',
+            },
           },
         ],
       },
