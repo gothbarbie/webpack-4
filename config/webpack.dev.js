@@ -1,6 +1,8 @@
 const path = require('path')
 const webpack = require('webpack')
 const HTMLWebpackPlugin = require('html-webpack-plugin')
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer')
+  .BundleAnalyzerPlugin
 
 module.exports = {
   entry: {
@@ -23,6 +25,18 @@ module.exports = {
     stats: {
       // print with colors in terminal
       colors: true,
+    },
+  },
+  optimization: {
+    splitChunks: {
+      chunks: 'all',
+      cacheGroups: {
+        vendor: {
+          name: 'vendor',
+          chunks: 'initial',
+          minChunks: 2,
+        },
+      },
     },
   },
   devtool: 'source-map',
@@ -95,6 +109,19 @@ module.exports = {
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
-    new HTMLWebpackPlugin({ template: './src/index.html' }),
+    new webpack.NamedModulesPlugin(),
+    new webpack.DefinePlugin({
+      'process.env': {
+        NODE_ENV: JSON.stringify('development'),
+      },
+    }),
+    new HTMLWebpackPlugin({
+      template: './src/index.html',
+      inject: true,
+      title: 'Webpack 4',
+    }),
+    new BundleAnalyzerPlugin({
+      generateStatsFile: true,
+    }),
   ],
 }
