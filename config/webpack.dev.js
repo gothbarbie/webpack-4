@@ -4,7 +4,11 @@ const HTMLWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
   entry: {
-    main: ['./src/client.js'],
+    main: [
+      'babel-runtime/regenerator',
+      'webpack-hot-middleware/client?reload=true',
+      './src/client.js',
+    ],
   },
   mode: 'development',
   output: {
@@ -45,6 +49,23 @@ module.exports = {
         ],
       },
       {
+        test: /\.sass$/,
+        use: [
+          {
+            loader: 'style-loader',
+          },
+          {
+            loader: 'css-loader',
+          },
+          {
+            loader: 'postcss-loader',
+          },
+          {
+            loader: 'sass-loader',
+          },
+        ],
+      },
+      {
         test: /\.html$/,
         use: [
           {
@@ -69,7 +90,7 @@ module.exports = {
     ],
   },
   plugins: [
-    // new webpack.HotModuleReplacementPlugin(),
+    new webpack.HotModuleReplacementPlugin(),
     new HTMLWebpackPlugin({ template: './src/index.html' }),
   ],
 }
